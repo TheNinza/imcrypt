@@ -4,7 +4,6 @@ const jimp = require('jimp');
 const path = require('path');
 const readline = require('readline');
 
-const randomColors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan'];
 
 // helper functions
 function askQuestion(query) {
