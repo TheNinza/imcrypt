@@ -9,15 +9,21 @@
 
 const init = require('./utils/init');
 const cli = require('./utils/cli');
-const log = require('./utils/log');
+const encrypt = require('./utils/encrypt');
+const decrypt = require('./utils/decrypt');
 
 const input = cli.input;
 const flags = cli.flags;
-const { clear, debug } = flags;
+const { clear } = flags;
 
 (async () => {
 	init({ clear });
-	input.includes(`help`) && cli.showHelp(0);
 
-	debug && log(flags);
+	input.includes(`help`) && cli.showHelp(0);
+	// check if encrypt is present in flags object
+	if (flags.encrypt) {
+		encrypt(flags);
+	} else if (flags.decrypt) {
+		decrypt(flags);
+	}
 })();
