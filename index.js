@@ -22,8 +22,18 @@ const { clear } = flags;
 	input.includes(`help`) && cli.showHelp(0);
 	// check if encrypt is present in flags object
 	if (flags.encrypt) {
-		encrypt(flags);
+		await encrypt(flags);
 	} else if (flags.decrypt) {
-		decrypt(flags);
+		await decrypt(flags);
 	}
+
+	// footer to show when the program is finished
+
+	const chalk = (await import(`chalk`)).default;
+
+	// print Give it a star on github: https://github.com/theninza/imcrypt with chalk and bgMagenta
+	console.log(
+		chalk.bgMagenta(` Give it a star on github: `) +
+			chalk.bold(` https://github.com/theninza/imcrypt `)
+	);
 })();

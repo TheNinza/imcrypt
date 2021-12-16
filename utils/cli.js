@@ -12,6 +12,21 @@ const flags = {
 		desc: `The image to decrypt`,
 		alias: `d`
 	},
+	outputImageFileName: {
+		type: `string`,
+		desc: `The output image file name`,
+		alias: `i`
+	},
+	outputKeyFileName: {
+		type: `string`,
+		desc: `The output key file name`,
+		alias: `p`
+	},
+	key: {
+		type: `string`,
+		desc: `The key file to use for decryption`,
+		alias: `k`
+	},
 	clear: {
 		type: `boolean`,
 		default: false,
@@ -27,21 +42,6 @@ const flags = {
 		type: `boolean`,
 		alias: `v`,
 		desc: `Print CLI version`
-	},
-	key: {
-		type: `string`,
-		desc: `The key to use for decryption`,
-		alias: `k`
-	},
-	outputImageFileName: {
-		type: `string`,
-		desc: `The output image`,
-		alias: `i`
-	},
-	outputKeyFileName: {
-		type: `string`,
-		desc: `The output key`,
-		alias: `p`
 	}
 };
 
