@@ -1,7 +1,7 @@
 {
 	"name": "imcrypt",
 	"description": "An image encryption node-js cli",
-	"version": "0.0.1",
+	"version": "1.0.1",
 	"license": "MIT",
 	"bin": {
 		"imcrypt": "index.js"
